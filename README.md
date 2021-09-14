@@ -46,7 +46,7 @@ cilium status --wait
 
 kubectl get pods -n kube-system
 ```
-## Deploy the demo app
+# Deploy the demo app
 ```bash
 kubectl create -f https://github.com/shashanksood050190/cilium-demo/blob/main/http-sw-app.yaml
 
