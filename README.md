@@ -48,7 +48,7 @@ kubectl get pods -n kube-system
 ```
 ## Deploy the demo app
 ```bash
-kubectl create -f https://raw.githubusercontent.com/cilium/cilium/1.10.3/examples/minikube/http-sw-app.yaml
+kubectl create -f https://github.com/shashanksood050190/cilium-demo/blob/main/http-sw-app.yaml
 
 #Kubernetes will deploy the pods and service in the background. Running kubectl get pods,svc will inform you about the progress of the operation.
  
@@ -105,13 +105,13 @@ Ship landed
 
 hubble observe -n default --since=1m
 ```
-Apply an L3/L4 Policy
+## Apply an L3/L4 Policy
 ```bash
 #We can use the labels assigned to the pods to define security policies
 #The policies will be applied to the right pods based on the labels irrespective of where or when it is running within the cluster.
 #We’ll apply the basic policy restricting deathstar landing requests to only the ships that have label (org=empire)
 
-kubectl create -f https://raw.githubusercontent.com/cilium/cilium/1.10.3/examples/minikube/sw_l3_l4_policy.yaml
+kubectl create -f https://github.com/shashanksood050190/cilium-demo/blob/main/sw_l3_l4_policy.yaml
 ```
 ## Inspect the policy details
 ```bash
